@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 # os.environ['HF_TOKEN']=os.getenv('HF_TOKEN')
-os.environ['GROQ_API_KEY']=os.getenv('GROQ_API_KEY')
+# os.environ['GROQ_API_KEY']=os.getenv('GROQ_API_KEY')
 
 import streamlit as st
 from langchain.chains import create_retrieval_chain,create_history_aware_retriever
@@ -110,3 +110,4 @@ if groq_api_key:
             st.success(f"Assistant: {response['answer']}")
 
             st.write("Chat History",session_history.messages)
+
